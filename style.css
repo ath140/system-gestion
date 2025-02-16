@@ -1,0 +1,39 @@
+/*# sourceMappingURL=style.css.map */
+.grid1{
+    background-color: aquamarine;
+    display:inline-grid;
+}
+.grid2{
+    background-color: blue;
+    display: inline-grid;
+}
+.grid11{
+    display: grid;
+}
+.grid12{
+ display: grid;
+ grid-template-columns: 25px 25px ;
+ grid-template-rows: 25px 25px;
+ height: 600px;
+ grid-gap: 20px;
+}
+.un{
+    background-color: burlywood;
+}
+.deux{
+    background-color: blueviolet;
+}
+.trois{
+    background-color: brown;
+}
+.quatre{
+    background-color: yellow;
+}
+.flexbox {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #333;
+    }
