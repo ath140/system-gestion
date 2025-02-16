@@ -117,7 +117,7 @@ $var = connxion("unite");
                     <caption>Répartition des Moyens</caption>
                     <thead class="text-center">
                         <tr>
-                            <th>M-TRANSPOT</th>
+                            <th>M-TRANSPORT</th>
                             <th>M-TERRASSEMENT</th>
                             <th>Autres</th>
                         </tr>
