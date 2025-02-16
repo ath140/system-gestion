@@ -113,7 +113,7 @@ $var = connxion("unite");
         </div>
         <div class="col-5">
             <div class="container ">
-                <table class="table table-striped">
+                <table class="table table-striped table-bordered">
                     <caption>Répartition des Moyens</caption>
                     <thead class="text-center">
                         <tr>
