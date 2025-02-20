@@ -21,20 +21,20 @@ $var = connxion("unite");
     <a href="#" class="nav-link ">Atelier</a>
     <a href="index.html" class="nav-link ">Retour</a>
   </nav>
-    <div class="h4 text-center">
+    <div class="h4 text-center bg-secondary text-light">
         INFO-PARC
     </div>
-    <div class="row">
+    <div class="row bg-secondary text-light">
         <div class="col-5">
-            <dl class="row">
+            <dl class="row ">
                 <dt class="col-3 text-center"><strong style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 20px;">PARC</strong></dt>
-                <dd class="col-9 bg-info" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 15px;">
+                <dd class="col-9" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 15px;">
                     <strong>ADRESSE</strong> : BP 222 ZONE INDUSTRIELLE ZAAROURA - TIARET ROUTE VERS MELAKOU.</br></br>
-                    <strong>SUPERFICIE</strong>: de 4 ects environ.</br>
-                    <strong>HANGAR</strong>: = 03 .</br>
-                    <strong>ATELIER</strong>: = 01.</br>
-                    <strong>DIRECTION.</strong></br>
-                    <strong>ACCEES</strong> = 01.
+                    <strong>1 - SUPERFICIE</strong>: de 4 ects environ.</br>
+                    <strong>2 - HANGAR</strong>: = 03 .</br>
+                    <strong>3 - ATELIER</strong>: = 01.</br>
+                    <strong>4 - DIRECTION.</strong></br>
+                    <strong>5 - ACCEES</strong> = 01.
                 </dd>
             </dl>
         </div>
@@ -67,7 +67,7 @@ $var = connxion("unite");
             $v = 0;
             $l_v = 0;
             $r_v = 0;
-            $en = 0;
+            $en = 0; 
             $ret = 0;
             $ca = 0;
             $tr = 0;
