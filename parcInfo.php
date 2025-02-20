@@ -14,17 +14,27 @@ $var = connxion("unite");
 </head>
 
 <body>
+<nav class="nav nav-pills nav-justified nav-tabs">
+    <a href="parcinfo.php" class="nav-link active bg-success">Info-Parc</a>
+    <a href="engin.php" class="nav-link ">Ajouter Engin</a>
+    <a href="#" class="nav-link ">pompe_Gasoil</a>
+    <a href="#" class="nav-link ">Atelier</a>
+    <a href="index.html" class="nav-link ">Retour</a>
+  </nav>
     <div class="h4 text-center">
         INFO-PARC
     </div>
     <div class="row">
         <div class="col-5">
             <dl class="row">
-                <dt class="col-3 text-center"><strong>Parc</strong></dt>
-                <dd class="col-9">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam corrupti dicta magni deserunt distinctio nulla pariatur,
-                    aut iusto eligendi, in eos, ullam cum quasi. Non aliquam quos modi eos accusantium.
+                <dt class="col-3 text-center"><strong style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 20px;">PARC</strong></dt>
+                <dd class="col-9 bg-info" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 15px;">
+                    <strong>ADRESSE</strong> : BP 222 ZONE INDUSTRIELLE ZAAROURA - TIARET ROUTE VERS MELAKOU.</br></br>
+                    <strong>SUPERFICIE</strong>: de 4 ects environ.</br>
+                    <strong>HANGAR</strong>: = 03 .</br>
+                    <strong>ATELIER</strong>: = 01.</br>
+                    <strong>DIRECTION.</strong></br>
+                    <strong>ACCEES</strong> = 01.
                 </dd>
             </dl>
         </div>
@@ -55,6 +65,8 @@ $var = connxion("unite");
             <?php
             $numbre = 0;
             $v = 0;
+            $l_v = 0;
+            $r_v = 0;
             $en = 0;
             $ret = 0;
             $ca = 0;
@@ -65,6 +77,7 @@ $var = connxion("unite");
             while ($row = $select->fetch(PDO::FETCH_OBJ)) {
                 $numbre = $numbre + 1;
                 $type = $row->type;
+                $cat = $row->catégorie;
                 switch ($type) {
                     case "VEHICULE":
                         $v = $v + 1;
@@ -85,27 +98,62 @@ $var = connxion("unite");
                         $ec = $ec + 1;
                         break;
                 }
+                switch ($cat) {
+                    case "leger":
+                        $l_v = $l_v + 1;
+                        break;
+                    case "lourd":
+                        $r_v = $r_v + 1;
+                        break;
+                }
             };
             ?>
-            <table class="table table-striped bg-info">
+            <table class="table table-striped bg-info table-bordered">
                 <caption>Répatition de la Flotte.</caption>
-                <thead class="table-dark">
+                <thead class="table-dark text-center">
                     <tr>
-                        <th>véhicule</th>
-                        <th>engin</th>
-                        <th>camion</th>
-                        <th>retrochargeur</th>
-                        <th>tracteur</th>
-                        <th>chargeur</th>
+                        <th>Transport</th>
+                        <th>Terrassement</th>
+                        <th>Tracteur</th>
                     </tr>
                 <tbody class="text-center">
                     <tr>
-                        <td><?php echo ($v); ?></td>
-                        <td><?php echo ($en); ?></td>
-                        <td> <?php echo ($ca); ?></td>
-                        <td><?php echo ($ret); ?></td>
+                        <td><?php echo ($l_v + $r_v); ?>
+                            <table class="table table-bordered">
+                                <thead class="bg-dark text-light">
+                                    <tr>
+                                        <th>leger</th>
+                                        <th>lourd</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-warning">
+                                    <tr>
+                                        <td><?php echo ($l_v) ?></td>
+                                        <td><?php echo ($r_v) ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <?php echo($en+$ret+$ec);?>
+                            <table class="table table-bordered">
+                                <thead class="bg-dark text-light">
+                                    <tr>
+                                        <th>Engin</th>
+                                        <th>Retro</th>
+                                        <th>Chargeur</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-warning"> 
+                                    <tr>
+                                        <td><?php echo ($en) ?></td>
+                                        <td><?php echo ($ret) ?></td>
+                                        <td><?php echo ($ec) ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
                         <td><?php echo ($tr); ?></td>
-                        <td><?php echo ($ec); ?></td>
                     </tr>
                 </tbody>
                 </thead>
