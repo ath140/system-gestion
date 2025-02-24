@@ -17,7 +17,7 @@ $var = connxion("unite");
 <nav class="nav nav-pills nav-justified nav-tabs">
     <a href="parcinfo.php" class="nav-link active bg-success">Info-Parc</a>
     <a href="engin.php" class="nav-link ">Ajouter Engin</a>
-    <a href="#" class="nav-link ">pompe_Gasoil</a>
+    <a href="pompe.php" class="nav-link ">pompe_Gasoil</a>
     <a href="#" class="nav-link ">Atelier</a>
     <a href="index.html" class="nav-link ">Retour</a>
   </nav>
